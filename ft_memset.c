@@ -14,11 +14,11 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	char	*p;
-	size_t	i;
+	unsigned char	*p;
+	size_t			i;
 
 	i = 0;
-	p = (char *)s;
+	p = (unsigned char *)s;
 	while (i < n)
 	{
 		p[i] = c;
@@ -30,15 +30,15 @@ void	*ft_memset(void *s, int c, size_t n)
 /*int main(void)
 {
     int i;
-    char b[10];
+    int b[10];
 
     i = 0;
-    //memset(b, 'a', sizeof(char) * 10);
-    ft_memset(b, 'a', sizeof(char) * 10);
+    //memset(b, '2', sizeof(int) * 10);
+    ft_memset(b, '9', sizeof(int) * 10);
 
     while (i < 10)
     {
-        printf("%c", b[i]);
+        printf("%d", b[i]);
         i++;
     }
     return 0;

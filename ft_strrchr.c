@@ -33,7 +33,7 @@ char	*ft_strrchr(const char *s, int c)
 	return (0);
 }
 
-int main(void)
+/*int main(void)
 {
     char s[] = "hellllloey";
     char *c1;
@@ -43,4 +43,4 @@ int main(void)
     c2 = ft_strrchr(s, '\0');
     printf("%s\n", c1);
     printf("%s\n", c2);
-}
+}*/

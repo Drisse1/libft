@@ -64,13 +64,13 @@ char    *ft_itoa(int n)
     return (p);
 }
 
-int    main(void)
+/*int    main(void)
 {
     char *p = ft_itoa(4294967296);
     printf("%s", p);
     free(p);
     return (0);
-}
+}*/
 
 
 // static int	count(int n)

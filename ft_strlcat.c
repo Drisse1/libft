@@ -18,6 +18,8 @@ size_t	ft_strlcat(char *dest, char *src, size_t size)
 	size_t	j;
 	size_t	l;
 
+	if (dest == ((void *)0) && size == 0)
+		return (ft_strlen(src) + size);
 	i = ft_strlen(dest);
 	l = ft_strlen(src) + ft_strlen(dest);
 	j = 0;
@@ -35,14 +37,15 @@ size_t	ft_strlcat(char *dest, char *src, size_t size)
 
 /*int	main(void)
 {
-    char src[] = " World";
-    char dest[50] = "hello";
-    printf("%zu ", strlcat(dest, src, 0));
-    printf(":%s:\n", dest);
+	char src[0xF] = "nyan !";
+	printf("%zu ", ft_strlcat(((void *)0), src, 2));
 
-    char src1[] = " World";
-    char dest1[50] = "hello";
-    printf("%zu ", ft_strlcat(dest1, src1, 0));
-    printf(":%s:\n", dest1);
+    //char dest[50] = "hello";
+    //printf(":%s:\n", dest);
+
+    //char src1[0xF] = "nyan !";
+    //char dest1[50] = "hello";
+    //printf("%zu ", ft_strlcat(((void *)0), src1, 0));
+    //printf(":%s:\n", dest1);
     return (0);
 }*/

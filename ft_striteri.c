@@ -1,40 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: del-yaag <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/08 17:15:22 by del-yaag          #+#    #+#             */
-/*   Updated: 2022/10/08 17:16:38 by del-yaag         ###   ########.fr       */
+/*   Created: 2022/10/16 12:22:54 by del-yaag          #+#    #+#             */
+/*   Updated: 2022/10/16 12:22:57 by del-yaag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	func1(unsigned int i, char *s)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < n)
+	while (*s)
 	{
-		if (((char *)s)[i] == (char)c)
-			return ((char *)s + i);
-		i++;
+		s = (s + i);
+		s++;
 	}
-	return (0);
 }
 
-/*int main(void)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-    //char d[] = {'a', 'b', 'c', 'd', 't', 'l', 'm'};
-    int d[256] = {1, 2, 3, 4, 5, 6, 7};
+	int	i;
 
-    int *p = memchr(d, 256, 7);
-    printf("%d\n", *p);
+	i = 0;
+	if (!s)
+		return ;
+	f(i, s);
+}
 
-    // int *p1 = ft_memchr(d, 256, 7);
-    // printf("%d", p1);
-    return (0);
+/*int	main(void)
+{
+	char	*s;
+	void	*p;
+
+	s = "0000000000";
+	p = func1;
+	ft_striteri(s, p);
+	printf("%s", s);
+	return (0);
 }*/

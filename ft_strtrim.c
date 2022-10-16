@@ -15,7 +15,7 @@
 static size_t	ft_checklast(char const *s, char const *set)
 {
 	size_t	i;
-	size_t	j;
+	int		j;
 
 	i = 0;
 	j = ft_strlen(s) - 1;
@@ -29,6 +29,8 @@ static size_t	ft_checklast(char const *s, char const *set)
 		else
 			i++;
 	}
+	if (j < 0)
+		return (0);
 	return (j);
 }
 
@@ -59,18 +61,29 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	z;
 	char	*p;
 
+	if (!s1)
+		return (0);
 	i = 0;
 	z = ft_checkbeg(s1, set);
 	j = ft_checklast(s1, set);
+	if (j < z)
+		return ("\0");
 	p = malloc(sizeof(char) * ((j - z) + 2));
 	if (!p)
 		return (0);
 	while (z <= j)
-	{
-		p[i] = s1[z];
-		z++;
-		i++;
-	}
+		p[i++] = s1[z++];
 	p[i] = '\0';
 	return (p);
+}
+
+int	main(void)
+{
+	char	*s;
+	char	*set;
+
+	s = "  \t \t \n   \n\n\n\t";
+	set = " \n\t";
+	printf(":%s:\n", ft_strtrim(s, set));
+	return (0);
 }

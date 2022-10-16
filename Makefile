@@ -1,36 +1,43 @@
-#my first Makefile
+ODIR = obj
+SRCS = ft_isascii.c ft_isprint.c ft_isalpha.c ft_isdigit.c ft_isalnum.c \
+		ft_tolower.c ft_toupper.c ft_strlen.c ft_strlcpy.c ft_strlcat.c \
+		ft_strchr.c ft_strrchr.c ft_strnstr.c ft_strncmp.c ft_atoi.c \
+		ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c \
+		ft_memchr.c ft_memcmp.c ft_strdup.c ft_calloc.c ft_itoa.c \
+		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
+		ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_strmapi.c \
+		ft_striteri.c
+SRCS_BONUS = ${SRCS} ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_front_bonus.c ft_lstadd_back_bonus.c \
+			ft_lstnew_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
+OBJS = ${patsubst %.c, ${ODIR}/%.o, ${SRCS}}
+OBJS_BONUS = ${patsubst %.c, ${ODIR}/%.o, ${SRCS_BONUS}}
 
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CC = cc
+CC_FLAGS = -Wall -Werror -Wextra
+RM = rm -rf
 
-all:
-	$(CC) $(CFLAGS) ft_atoi.c main_atoi.c -o m
-	$(CC) $(CFLAGS) ft_putchar_fd.c main_putchar_fd.c -o putchar
-	$(CC) $(CFLAGS) ft_putstr_fd.c main_putstr.c -o putstr
-	$(CC) $(CFLAGS) ft_putendl_fd.c ft_putstr_fd.c main_putendl_fd.c -o putendl
-	$(CC) $(CFLAGS) ft_putnbr_fd.c ft_putchar_fd.c main_putnbr_fd.c -o putnbr
-	$(CC) $(CFLAGS) ft_strjoin.c ft_strlen.c main_strjoin.c -o strjoin
-	$(CC) $(CFLAGS) ft_strlen.c main_strlen.c -o strlen
-	$(CC) $(CFLAGS) ft_strtrim.c ft_strlen.c main_strtrim.c -o strtrim
-	$(CC) $(CFLAGS) ft_substr.c ft_strlen.c main_substr.c -o substr
+NAME = libft.a
 
-exec:
-	./substr | cat -e
-	./strjoin | cat -e
-	./strtrim | cat -e
-	./strlen | cat -e
-	./putchar | cat -e
-	./putstr | cat -e
-	./putnbr | cat -e
-	./putendl | cat -e
+${ODIR}/%.o: %.c libft.h
+	@mkdir -p ${@D}
+	CC ${CC_FLAGS} -c $< -o $@
+
+all: ${NAME}
+
+$(NAME): ${OBJS}
+	ar rc ${NAME} ${OBJS}
+	ranlib ${NAME}
+
+bonus: ${OBJS_BONUS}
+	ar rc ${NAME} ${OBJS_BONUS}
+	ranlib ${NAME}
 
 clean:
-	rm -rf m
-	rm -rf substr
-	rm -rf strjoin
-	rm -rf strtrim
-	rm -rf strlen
-	rm -rf putchar
-	rm -rf putstr
-	rm -rf putendl
-	rm -rf putnbr
+	${RM} ${ODIR}
+
+fclean: clean
+	${RM} ${NAME}
+
+re: fclean all
+
+.PHONY: clean fclean re bonus all

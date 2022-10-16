@@ -17,7 +17,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	size_t	i;
 
 	i = 0;
-	if (!dst && !src)
+	if (!dest && !src)
 		return (0);
 	while (i < n)
 	{
@@ -27,7 +27,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return ((char *)dest);
 }
 
-int main(void)
+/*int main(void)
 {
     char s[] = "";
     char d[] = "";
@@ -38,4 +38,4 @@ int main(void)
     printf(":%s:\n", s); //memcpy (overlapping)
     printf(":%s:", s1); //memcpy (overlapping)
     return (0);
-}
+}*/

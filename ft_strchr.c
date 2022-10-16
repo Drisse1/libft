@@ -27,20 +27,20 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if (c == '\0')
 	{
-		s = "\0";
-		return ((char *)s);
+		// s = "\0";
+		return ((char *)(s + i));
 	}
 	return (0);
 }
 
 /*int main(void)
 {
-    char s[] = "hello";
+    char s[] = "there is so ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0";
     char *c1;
     char *c2;
 
-    c1 = strchr(s, 'e');
-    c2 = ft_strchr(s, 'e');
+    c1 = strchr(s, '\0');
+    c2 = ft_strchr(s, '\0');
     printf("%c\n", *(c1 + 1));
     printf("%c\n", *(c2 + 1));
 }*/

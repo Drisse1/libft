@@ -19,13 +19,15 @@ char	*ft_strnstr(const char	*big, const char *little, size_t len)
 
 	i = 0;
 	j = 0;
-	if (!little)
+	// if (little == 0)
+	// 	return ((char *)big);
+	if (len == 0 || little == big)
 		return ((char *)big);
 	while (big[i] && i < len)
 	{
 		while (big[i + j] == little[j] && big[i])
 			j++;
-		if (!little[j])
+		if (!little[j] && i + j < len)
 			return ((char *)big + i);
 		i++;
 	}
@@ -34,12 +36,10 @@ char	*ft_strnstr(const char	*big, const char *little, size_t len)
 
 /*int main(void)
 {
-
-    char s1[] = "hello world";
-    char f[] = " ";
-    int n = 7;
-
-    printf("%s\n", ft_strnstr(s1, f, n));
-    printf("%s", strnstr(s1, f, n));
-    return (0);
+	char *s1 = "A";
+	//char *f = "";
+	int n = ft_strlen(s1) + 1;
+	//printf("%s\n", ft_strnstr(s1, ((void *)0), 3));
+	printf("%s", ft_strnstr(s1, s1, n));
+	return (0);
 }*/
