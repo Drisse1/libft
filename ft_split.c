@@ -38,46 +38,45 @@ static int	ft_words_count(const char *s, char c)
 	return (n);
 }
 
-// static	void	ft_free(char **str, int j)
-// {
-// 	int	i;
+static	char	**ft_free(char **str)
+{
+	int	i;
 
-// 	i = -1;
-// 	while (++i < j)
-// 		free(str[i]);
-// 	free(str);
-// 	str = 0;
-// }
+	i = 0;
+	while (str[i])
+		free(str[i++]);
+	free(str);
+	str = 0;
+	return (NULL);
+}
 
-static void	ft_handler(char const *s, char **str, char c, int start)
+static char	**ft_handler(char const *s, char **str, char c, int start)
 {
 	int		j;
 	int		i;
 	int		finish;
-	int		b;
 
 	i = -1;
 	j = 0;
-	b = 0;
 	finish = -1;
 	while (s[++i])
 	{
 		if (s[i] != c && start == -1)
 			start = i;
-		if ((s[b] != c && finish == -1 && s[b + 1] == c) ||  s[b + 1] == '\0')
-			finish = b + 1;
-		//if ((s[i] == c || s[i + 1] == '\0') && (i - 1 >= 0 && s[i - 1] != c))
+		if ((s[i] != c && finish == -1 && s[i + 1] == c) || s[i + 1] == '\0')
+			finish = i + 1;
 		if (start != -1 && finish != -1)
 		{
-			/*if (s[i + 1] == '\0')
-				b = i + 1;*/
-			str[j++] = ft_substr(s, start, finish - start);
+			str[j] = ft_substr(s, start, finish - start);
+			if (!str[j])
+				return (ft_free(str));
+			j++;
 			start = -1;
 			finish = -1;
 		}
-		b++;
 	}
-	str[j] = 0;
+	str[j] = NULL;
+	return (str);
 }
 
 char	**ft_split(char const *s, char c)
@@ -91,30 +90,5 @@ char	**ft_split(char const *s, char c)
 	str = (char **)malloc(sizeof(char *) * (ft_words_count(s, c) + 1));
 	if (!str)
 		return (0);
-	ft_handler(s, str, c, start);
-	return (str);
+	return (ft_handler(s, str, c, start));
 }
-
-// int	main(void)
-// {
-// 	int		i;
-// 	char	**str;
-
-// 	char *s = "split  ||this|for|me|||||!|";
-// 	i = -1;
-// 	//printf("%d\n", ft_words_count(s, c));
-// 	str = ft_split(s, '|');
-// 	/*while (str[++i])
-// 		printf(":%s:\n", str[i]);*/
-// 	//while (1);
-// 	printf(":%s:\n", str[0]);
-// 	printf(":%s:\n", str[1]);
-// 	printf(":%s:\n", str[2]);
-// 	printf(":%s:\n", str[3]);
-// 	printf(":%s:\n", str[4]);
-// 	printf(":%s:\n", str[5]);
-// 	printf(":%s:\n", str[6]);
-// 	printf(":%s:\n", str[7]);
-// 	free(str);
-// 	return (0);
-// }

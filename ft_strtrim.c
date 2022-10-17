@@ -77,13 +77,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (p);
 }
 
-int	main(void)
-{
-	char	*s;
-	char	*set;
+// int	main(void)
+// {
+// 	char	*s;
+// 	char	*set;
 
-	s = "  \t \t \n   \n\n\n\t";
-	set = " \n\t";
-	printf(":%s:\n", ft_strtrim(s, set));
-	return (0);
-}
+// 	s = "  \t \t \n   \n\n\n\t";
+// 	set = " \n\t";
+// 	printf(":%s:\n", ft_strtrim(s, set));
+// 	return (0);
+// }

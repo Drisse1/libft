@@ -14,63 +14,71 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-static int    count(long n)
+static int	count(long n)
 {
-    int    i;
+	int	i;
 
-    i = 0;
-    if (n < 0)
-    {
-      n *= -1;
-      i++;
-    }
-    while (n > 10)
-    {
-        n /= 10;
-        i++;
-    }
-    return (i);
+	i = 0;
+	if (n < 0)
+	{
+		n *= -1;
+		i++;
+	}
+	while (n > 9)
+	{
+		n /= 10;
+		i++;
+	}
+	if (n >= 0 && n < 10)
+		i++;
+	return (i);
 }
 
-static void ft_handler(long n, char *p, int c)
+static void	ft_handler(long n, char *p, int c)
 {
-  if (n < 0)
-    {
-        n *= -1;
-        p[0] = '-';
-    }
-    while (n > 9)
-    {
-        p[c--] = (n % 10) + 48;
-        n /= 10;
-    }
-    if (n < 10)
-      p[c] = (n % 10) + 48;
+	p[c] = '\0';
+	if (n < 0)
+	{
+		n *= -1;
+		p[0] = '-';
+	}
+	while (n > 9)
+	{
+		p[--c] = (n % 10) + 48;
+		n /= 10;
+	}
+	if (n < 10)
+		p[--c] = (n % 10) + 48;
 }
 
-char    *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-    long      n1;
-    int        c;
-    char    *p;
+	long	n1;
+	int		c;
+	char	*p;
 
-    n1 = (long)n;
-    c = count(n1);
-    p = malloc(sizeof(char) * (c + 2));
-    if (!p)
-        return (0);
-    p[c + 1] = '\0';
-    ft_handler(n1, p, c);
-    return (p);
+	n1 = (long)n;
+	c = count(n1);
+	p = malloc(sizeof(char) * (c + 1));
+	if (!p)
+		return (0);
+	ft_handler(n1, p, c);
+	return (p);
 }
 
-/*int    main(void)
+/*int	main(void)
 {
-    char *p = ft_itoa(4294967296);
-    printf("%s", p);
-    free(p);
-    return (0);
+	int		n = 1021108448;
+
+	printf(":%s:", ft_itoa(n));
 }*/
+
+
+//     // char *p = ft_itoa(4294967296);
+//     // printf("%s", p);
+//     // free(p);
+//     return (0);
+// }
 
 
 // static int	count(int n)
