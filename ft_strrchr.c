@@ -21,11 +21,11 @@ char	*ft_strrchr(const char *s, int c)
 		i++;
 	while (i >= 0)
 	{
-		if (s[i] == c)
+		if (s[i] == (unsigned char)c)
 			return ((char *)&s[i]);
 		i--;
 	}
-	if (c == '\0')
+	if ((unsigned char)c == '\0')
 	{
 		s = "\0";
 		return ((char *)s);
@@ -33,14 +33,14 @@ char	*ft_strrchr(const char *s, int c)
 	return (0);
 }
 
-/*int main(void)
-{
-    char s[] = "hellllloey";
-    char *c1;
-    char *c2;
+// int main(void)
+// {
+//     char s[] = "tripouille";
+//     char *c1;
+//     char *c2;
 
-    c1 = strrchr(s, '\0');
-    c2 = ft_strrchr(s, '\0');
-    printf("%s\n", c1);
-    printf("%s\n", c2);
-}*/
+//     c1 = strrchr(s, 't' + 256);
+//     c2 = ft_strrchr(s, 't' + 256);
+//     printf("%s\n", c1);
+//     printf("%s\n", c2);
+// }

@@ -57,22 +57,22 @@ static size_t	ft_checkbeg(char const *s, char const *set)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
-	size_t	j;
-	size_t	z;
+	size_t	end;
+	size_t	start;
 	char	*p;
 
 	if (!s1)
 		return (0);
 	i = 0;
-	z = ft_checkbeg(s1, set);
-	j = ft_checklast(s1, set);
-	if (j < z)
-		return ("\0");
-	p = malloc(sizeof(char) * ((j - z) + 2));
+	start = ft_checkbeg(s1, set);
+	end = ft_checklast(s1, set);
+	if (start > end)
+		return ((char *)ft_calloc(1, 1));
+	p = malloc(sizeof(char) * ((end - start) + 2));
 	if (!p)
 		return (0);
-	while (z <= j)
-		p[i++] = s1[z++];
+	while (start <= end)
+		p[i++] = s1[start++];
 	p[i] = '\0';
 	return (p);
 }

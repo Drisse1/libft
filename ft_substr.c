@@ -53,9 +53,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		}
 	}
 	else
-	{
-		p = malloc(sizeof(char) * 1);
-		p[i] = '\0';
-	}
+		p = (char *)ft_calloc(1, 1);
 	return (p);
 }

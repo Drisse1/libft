@@ -21,7 +21,7 @@ static size_t	ft_minmax(size_t res, int sign)
 	return (res);
 }
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	size_t	i;
 	size_t	res;
@@ -33,13 +33,12 @@ int	ft_atoi(char *str)
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\v'
 		|| str[i] == '\f' || str[i] == '\r' || str[i] == '\n')
 		i++;
-	if (str[i] == '-')
+	if (str[i] == '-' || str[i] == '+')
 	{
+		if (str[i] == '-')
+			sign *= -1;
 		i++;
-		sign *= -1;
 	}
-	else if (str[i] == '+')
-		i++;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		res = res * 10 + (str[i] - 48);
