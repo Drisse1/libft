@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 static int	count(long n)
 {
@@ -66,25 +64,19 @@ char	*ft_itoa(int n)
 	return (p);
 }
 
-/*int	main(void)
-{
-	int		n = 1021108448;
-
-	printf(":%s:", ft_itoa(n));
-}*/
-
-
+// int	main(void)
+// {
+// 	int		n = 1021108448;
+// 	printf(":%s:", ft_itoa(n));
+// }
 //     // char *p = ft_itoa(4294967296);
 //     // printf("%s", p);
 //     // free(p);
 //     return (0);
 // }
-
-
 // static int	count(int n)
 // {
 // 	int	i;
-
 // 	i = 0;
 // 	while (n > 10)
 // 	{
@@ -93,13 +85,11 @@ char	*ft_itoa(int n)
 // 	}
 // 	return (i);
 // }
-
 // char	*ft_strrev(char *str)
 // {
 // 	int	len;
 // 	int	i;
 // 	char	tmp;
-
 // 	len = 0;
 // 	i = 0;
 // 	while (str[len])
@@ -116,7 +106,6 @@ char	*ft_itoa(int n)
 // 	// str[i] = '\0';
 // 	return (str);
 // }
-
 // char	*ft_itoa(int n)
 // {
 // 	int		i;
@@ -125,7 +114,6 @@ char	*ft_itoa(int n)
 // 	int		m;
 // 	char	*p;
 // 	char	*p1;
-
 // 	i = 0;
 // 	f = 0;
 // 	if (n < 0)
@@ -180,7 +168,6 @@ char	*ft_itoa(int n)
 // 	}
 // 	return (p1);
 // }
-
 // int	main(void)
 // {
 // 	char *p = ft_itoa(-123);

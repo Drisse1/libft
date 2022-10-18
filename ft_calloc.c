@@ -19,6 +19,11 @@ void	*ft_calloc(size_t number, size_t size)
 	p = malloc(number * size);
 	if (!p)
 		return (0);
+	if (size == SIZE_MAX || number == SIZE_MAX)
+	{
+		p = NULL;
+		return (p);
+	}
 	ft_bzero(p, number * size);
 	return (p);
 }
