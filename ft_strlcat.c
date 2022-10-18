@@ -35,17 +35,17 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	return (l);
 }
 
-int	main(void)
-{
-	char src[0xF] = "nyan !";
-	printf("%zu ", strlcat(((void *)0), src, 0));
+// int	main(void)
+// {
+// 	char src[0xF] = "nyan !";
+// 	printf("%zu ", strlcat(((void *)0), src, 0));
 
-    //char dest[50] = "hello";
-    //printf(":%s:\n", dest);
+//     //char dest[50] = "hello";
+//     //printf(":%s:\n", dest);
 
-    //char src1[0xF] = "nyan !";
-    //char dest1[50] = "hello";
-    //printf("%zu ", ft_strlcat(((void *)0), src1, 0));
-    //printf(":%s:\n", dest1);
-    return (0);
-}
+//     //char src1[0xF] = "nyan !";
+//     //char dest1[50] = "hello";
+//     //printf("%zu ", ft_strlcat(((void *)0), src1, 0));
+//     //printf(":%s:\n", dest1);
+//     return (0);
+// }
