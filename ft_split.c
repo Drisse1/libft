@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int	ft_words_count(const char *s, char c)
 {
@@ -38,15 +39,14 @@ static int	ft_words_count(const char *s, char c)
 	return (n);
 }
 
-static	char	**ft_free(char **str)
+static	char	**ft_free(char **str, int j)
 {
 	int	i;
 
 	i = 0;
-	while (str[i])
+	while (i < j)
 		free(str[i++]);
 	free(str);
-	str = 0;
 	return (NULL);
 }
 
@@ -69,7 +69,7 @@ static char	**ft_handler(char const *s, char **str, char c, int start)
 		{
 			str[j] = ft_substr(s, start, finish - start);
 			if (!str[j])
-				return (ft_free(str));
+				return (ft_free(str, j));
 			j++;
 			start = -1;
 			finish = -1;
@@ -92,3 +92,21 @@ char	**ft_split(char const *s, char c)
 		return (0);
 	return (ft_handler(s, str, c, start));
 }
+
+// int	main(void)
+// {
+//     const char *s = "hf dfuhsi sfhusfk hvdisuhgs";
+
+//     //printf("%d\n", ft_word_count(s, ' '));
+//     char **res = ft_split(s, ' ');
+
+//     while (*res)
+//     {
+//         printf("%s\n", *res++);
+//     }
+// 	while (1)
+// 	{
+// 	}
+//     return (0);
+// }
+	// str = 0;
