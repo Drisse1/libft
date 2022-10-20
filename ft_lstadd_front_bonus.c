@@ -11,21 +11,19 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	new = malloc(sizeof(t_list));
 	new->next = *lst;
+	new = *lst;
 }
 
-int main(void)
+/*int	main(void)
 {
 	t_list	*head;
 	t_list	*first;
 	t_list	*second;
 	t_list	*new;
-
 	head = malloc(sizeof(t_list));
 	first = malloc(sizeof(t_list));
 	second = malloc(sizeof(t_list));
@@ -39,9 +37,7 @@ int main(void)
 	printf("first address: %p\n", first->next);
 	second->content = "sir awa sir";
 	second->next = NULL;
-	printf("second address: %p\n", second->next);
+	// printf("second address: %p\n", second->next);
 	ft_lstadd_front(&head, new);
 	printf("new address: %p\n", new->next);
-
-
-}
+}*/
