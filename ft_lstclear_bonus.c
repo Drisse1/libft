@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: del-yaag <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/19 16:01:39 by del-yaag          #+#    #+#             */
-/*   Updated: 2022/10/19 16:01:41 by del-yaag         ###   ########.fr       */
+/*   Created: 2022/10/21 11:56:23 by del-yaag          #+#    #+#             */
+/*   Updated: 2022/10/21 11:56:25 by del-yaag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+// static void	func(void *content)
+// {
+// 	free(content);
+// }
+
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*ptr;
 
-	ptr = malloc(sizeof(t_list));
-	if (!ptr)
-		return (0);
-	ptr->content = content;
-	ptr->next = NULL;
-	return (ptr);
+	if (!lst || !del)
+		return ;
+	ptr = *lst;
+	while (*lst)
+	{
+		ptr = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = ptr;
+	}
 }
-
-// int main(void)
-// {
-// 	t_list	*head;
-
-// 	head = ft_lstnew("hello");
-// 	printf("%s\n", head->content);
-// 	printf("%p", head->next);
-// 	return (0);
-// }
