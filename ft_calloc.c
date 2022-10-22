@@ -15,15 +15,14 @@
 void	*ft_calloc(size_t number, size_t size)
 {
 	void	*p;
+	int		i;
 
-	p = malloc(number * size);
+	i = number * size;
+	if ((number && (i / number) != size) || (size && (i / size) != number))
+		return (NULL);
+	p = malloc(i);
 	if (!p)
 		return (0);
-	if (size == SIZE_MAX || number == SIZE_MAX)
-	{
-		p = NULL;
-		return (p);
-	}
 	ft_bzero(p, number * size);
 	return (p);
 }
