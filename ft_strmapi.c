@@ -23,7 +23,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	char			*str;
 
-	if (!s)
+	if (!s || !f)
 		return (0);
 	i = -1;
 	str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
@@ -35,16 +35,16 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (str);
 }
 
-/*int main(void)
-{
-	const char	*s;
-	char		(*p)(unsigned int, char);
-	char		*str;
+// int main(void)
+// {
+// /* 	const char	*s;
+// 	char		(*p)(unsigned int, char);
+// 	char		*str; */
 
-	s = "aaaaaaaaa";
-	p = func2;
-	str = ft_strmapi(s, p);
-	printf("%s", str);
-	free(str);
-	return (0);
-}*/
+// /* 	s = "aaaaaaaaa";
+// 	p = func2; */
+// /* 	str = ft_strmapi(s, p);
+//  */	printf("%s", ft_strmapi("srthvdiknv", NULL));
+// 	//free(str);
+// 	return (0);
+// }

@@ -58,9 +58,9 @@ static int	ft_calculater(const char *str, int i, int sign)
 	{
 		old = res;
 		res *= 10;
-		if ((res / 10) != old && res != 0 && sign == 1)
+		if ((res / 10) != old && sign == 1)
 			return (-1);
-		if ((res / 10) != old && res != 0 && sign == -1)
+		if ((res / 10) != old && sign == -1)
 			return (0);
 		res += (str[i] - 48);
 		i++;
@@ -88,7 +88,7 @@ int	ft_atoi(const char *str)
 }
 // int	main(void)
 // {
-// 	char str[] = "-15564651645644646445489468";
+// 	char str[] = "1";
 // 	// char buff[0xF0];
 // 	printf("%d\n", atoi(str));
 // 	printf("%d\n", ft_atoi(str));
