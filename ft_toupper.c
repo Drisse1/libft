@@ -18,16 +18,3 @@ int	ft_toupper(int c)
 		c -= 32;
 	return (c);
 }
-
-/*int main(void)
-{
-    char c = ' ';
-    while (c <= '~')
-    {
-        printf("%c ---- ", toupper(c));
-        printf("%c\n", ft_toupper(c));
-        c++;
-    }
-    
-    return (0);
-}*/

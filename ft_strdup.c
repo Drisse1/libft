@@ -29,15 +29,3 @@ char	*ft_strdup(const char *str)
 	p[i] = '\0';
 	return (p);
 }
-
-/*int main(void)
-{
-    char *s = "hello world          ";
-    // s[2] = 'w';
-
-	char *mine = strdup(s);
-    char *thiers = ft_strdup(s);
-
-    printf(":%s:\n:%s:", mine,thiers);
-    return (0);
-}*/

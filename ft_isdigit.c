@@ -19,28 +19,3 @@ int	ft_isdigit(int c)
 	else
 		return (0);
 }
-
-/*int main(void)
-{
-    int c = 1;
-    printf("%d ------ ", isdigit(c));
-    printf("%d\n", ft_isdigit(c));
-    c = '1';
-    printf("%d ------ ", isdigit(c));
-    printf("%d\n", ft_isdigit(c));
-    c = 'a';
-    printf("%d ------ ", isdigit(c));
-    printf("%d\n", ft_isdigit(c));
-    c = 'A';
-    printf("%d ------ ", isdigit(c));
-    printf("%d\n", ft_isdigit(c));
-    c = '/';
-    printf("%d ------ ", isdigit(c));
-    printf("%d\n", ft_isdigit(c));
-    c = ' ';
-    printf("%d ------ ", isdigit(c));
-    printf("%d\n", ft_isdigit(c));
-    c = '\n';
-    printf("%d ------ ", isdigit(c));
-    printf("%d\n", ft_isdigit(c));
-}*/

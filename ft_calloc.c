@@ -26,22 +26,3 @@ void	*ft_calloc(size_t number, size_t size)
 	ft_bzero(p, number * size);
 	return (p);
 }
-
-/*int main(void)
-{
-    int i = -1;
-    int *x = calloc(4, sizeof(int));
-    int *y = calloc(4, sizeof(int));
-    int *z = malloc(4 * sizeof(int));
-
-    while (++i < 4)
-        printf("%d- %d\n", i, *(x + i));
-    i = -1;
-    while (++i < 8)
-        printf("%d", *(y + i));
-    i = -1;
-    while (++i < 4)
-        printf("%d- %d\n", i, *(z + i));
-	free(y);
-    return (0);
-}*/

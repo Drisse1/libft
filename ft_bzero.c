@@ -25,26 +25,3 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-
-/*int main(void)
-{
-    char b[10];
-    int i;
-
-    i = 0;
-    ft_bzero(b, sizeof(char) * 10);
-    while ( i < 10)
-    {
-        printf("%d - %c\n", i, b[i]);
-        i++;
-    }
-    printf("---------------\n");
-    i = 0;
-    bzero(b, sizeof(char) * 10);
-    while (i < 10)
-    {
-        printf("%d - %c\n", i, b[i]);
-        i++;
-    }
-    return (0);
-}*/

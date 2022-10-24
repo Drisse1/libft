@@ -32,14 +32,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd((n % 10), fd);
 	}
 }
-
-/*int main(void)
-{
-	// int s;
-
-	// s = -21474;
-	int i = (-2147483647 -1);
-	ft_putnbr_fd(i, 2);
-	write(1, "\n", 1);
-	return (0);
-}*/

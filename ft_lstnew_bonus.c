@@ -23,13 +23,3 @@ t_list	*ft_lstnew(void *content)
 	ptr->next = NULL;
 	return (ptr);
 }
-
-// int main(void)
-// {
-// 	t_list	*head;
-
-// 	head = ft_lstnew("hello");
-// 	printf("%s\n", head->content);
-// 	printf("%p", head->next);
-// 	return (0);
-// }

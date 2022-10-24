@@ -38,19 +38,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-/*int main(void)
-{
-    int i;
-    char s[] = "abcdefghijklmn";
-    char s1[] = "abcdefghijklmn";
-    //char d[7] = "abc";
-
-    i = sizeof(s) - 1;
-    ft_memmove(s + 2, s, 6);
-    printf(":%s:\n", s);
-    memmove(s1 + 2, s1, 6);
-    printf(":%s:\n", s1);
-    printf(":%i:\n", i);
-    return (0);
-}*/

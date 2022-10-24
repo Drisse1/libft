@@ -32,15 +32,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (0);
 }
-
-// int main(void)
-// {
-//     char s[] = "tripouille";
-//     char *c1;
-//     char *c2;
-
-//     c1 = strrchr(s, 't' + 256);
-//     c2 = ft_strrchr(s, 't' + 256);
-//     printf("%s\n", c1);
-//     printf("%s\n", c2);
-// }

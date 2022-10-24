@@ -18,16 +18,3 @@ int	ft_tolower(int c)
 		c += 32;
 	return (c);
 }
-
-/*int main(void)
-{
-    char c = ' ';
-    while (c <= '~')
-    {
-        printf("%c ---- ", tolower(c));
-        printf("%c\n", ft_tolower(c));
-        c++;
-    }
-    
-    return (0);
-}*/

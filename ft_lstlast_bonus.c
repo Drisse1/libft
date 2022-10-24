@@ -23,28 +23,3 @@ t_list	*ft_lstlast(t_list *lst)
 	ptr = lst;
 	return (ptr);
 }
-
-// int	main(void)
-// {
-// 	t_list	*head = NULL;
-// 	// t_list	*first, *second, *third;
-// 	t_list	*new;
-// 	//int		count;
-// 	// head = malloc(sizeof(t_list));
-// 	// first = malloc(sizeof(t_list));
-// 	// second = malloc(sizeof(t_list));
-// 	// third = malloc(sizeof(t_list));
-// 	// new = malloc(sizeof(t_list));
-// 	// head->content = "hello";
-// 	// first->content = "hayhay";
-// 	// second->content = "hiyhiy";
-// 	// third->content = "hoyhoy";
-// 	// head->next = NULL;
-// 	// first->next = second;
-// 	// second->next = third;
-// 	// third->next = NULL;
-// 	//count = ft_lstsize(head);
-// 	new = ft_lstlast(head);
-// 	//printf("%s", new->content);
-// 	printf("third address: %p  | new address:  %p", head, new);
-// }

@@ -21,28 +21,3 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
-
-/*int main(void)
-{
-    int c = 1;
-    printf("%d ------ ", isalnum(c));
-    printf("%d\n", ft_isalnum(c));
-    c = '1';
-    printf("%d ------ ", isalnum(c));
-    printf("%d\n", ft_isalnum(c));
-    c = 'a';
-    printf("%d ------ ", isalnum(c));
-    printf("%d\n", ft_isalnum(c));
-    c = 'A';
-    printf("%d ------ ", isalnum(c));
-    printf("%d\n", ft_isalnum(c));
-    c = '/';
-    printf("%d ------ ", isalnum(c));
-    printf("%d\n", ft_isalnum(c));
-    c = ' ';
-    printf("%d ------ ", isalnum(c));
-    printf("%d\n", ft_isalnum(c));
-    c = '\n';
-    printf("%d ------ ", isalnum(c));
-    printf("%d\n", ft_isalnum(c));
-}*/

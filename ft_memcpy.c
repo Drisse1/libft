@@ -26,17 +26,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return ((char *)dest);
 }
-
-// int main(void)
-// {
-// 	char s[20] = "abcdefgh";
-// 	char d[20] = "";
-
-// 	memcpy(s + 2, s, 6);
-// 	printf(":%s:\n", s); //memcpy (overlapping)
-// 	char s1[] = "\0";
-// 	char d1[20] = "\0";
-// 	memcpy(s + 2, s, 6);
-//     printf(":%s:", s); //memcpy (overlapping)
-//     return (0);
-// }

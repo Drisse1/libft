@@ -21,22 +21,3 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
-
-/*int main(void)
-{
-    char str[] = "hello";
-    printf("%zu ---- ", strlen(str));
-    printf("%zu\n", ft_strlen(str));
-
-    char str1[] = "he\0llo";
-    printf("%zu ---- ", strlen(str1));
-    printf("%zu\n", ft_strlen(str1));
-
-    char str2[] = "";
-    printf("%zu ---- ", strlen(str2));
-    printf("%zu\n", ft_strlen(str2));
-
-    char str3[] = "\0";
-    printf("%zu ---- ", strlen(str3));
-    printf("%zu\n", ft_strlen(str3));
-}*/

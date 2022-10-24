@@ -19,33 +19,3 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
-
-/*int main(void)
-{
-    int c = 32;
-    while (c < 127)
-    {
-        printf("%d ------ ", isprint(c));
-        printf("%d\n", ft_isprint(c));
-        c++;
-    }
-    printf("------------------------\n");
-    c = '1';
-    printf("%d ------ ", isprint(c));
-    printf("%d\n", ft_isprint(c));
-    c = 'a';
-    printf("%d ------ ", isprint(c));
-    printf("%d\n", ft_isprint(c));
-    c = 'A';
-    printf("%d ------ ", isprint(c));
-    printf("%d\n", ft_isprint(c));
-    c = '/';
-    printf("%d ------ ", isprint(c));
-    printf("%d\n", ft_isprint(c));
-    c = ' ';
-    printf("%d ------ ", isprint(c));
-    printf("%d\n", ft_isprint(c));
-    c = '\n';
-    printf("%d ------ ", isprint(c));
-    printf("%d\n", ft_isprint(c));
-}*/

@@ -28,23 +28,3 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (count);
 }
-
-// int	main(void)
-// {
-// 	t_list	*head, *first, *second, *third;
-// 	int		count;
-// 	head = malloc(sizeof(t_list));
-// 	first = malloc(sizeof(t_list));
-// 	second = malloc(sizeof(t_list));
-// 	third = malloc(sizeof(t_list));
-// 	head->content = "hello";
-// 	first->content = "hayhay";
-// 	second->content = "hiyhiy";
-// 	third->content = "hoyhoy";
-// 	head->next = first;
-// 	first->next = second;
-// 	second->next = third;
-// 	third->next = NULL;
-// 	count = ft_lstsize(head);
-// 	printf("%d", count);
-// }

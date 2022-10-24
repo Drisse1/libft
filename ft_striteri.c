@@ -12,11 +12,6 @@
 
 #include "libft.h"
 
-/*void	func1(unsigned int i, char *s)
-{
-	*s += i;
-}*/
-
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	int	i;
@@ -30,11 +25,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
-
-/*int	main(void)
-{
-	char	s[] = "0000000000";
-	ft_striteri(s, func1);
-	printf("%s", s);
-	return (0);
-}*/

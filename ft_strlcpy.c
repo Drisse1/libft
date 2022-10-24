@@ -31,22 +31,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 		i++;
 	return (i);
 }
-
-/*int main(void)
-{
-    char src[] = "hello world";
-    //char dest[8] = "";
-    printf("%zu ---- \n", ft_strlcpy(src + 3, src, 6));
-    printf("%s\n", src);
-
-    char src1[] = "hello world";
-    char dest1[] = "";
-    printf("%zu\n", ft_strlcpy(dest1, src1, 7));
-    printf("%s\n", dest1);
-    // char src1[20] = "hello world";
-    // // char src2[] = "hello world";
-    // // char dest1[11] = "";
-    // printf("{%c}\n", src1[4]);
-    // memmove(&src1[3], src1, 6);
-    // printf("{%s}\n", src1);
-}*/

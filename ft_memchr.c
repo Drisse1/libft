@@ -25,16 +25,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-
-/*int main(void)
-{
-    //char d[] = {'a', 'b', 'c', 'd', 't', 'l', 'm'};
-    int d[256] = {1, 2, 3, 4, 5, 6, 7};
-
-    int *p = memchr(d, 256, 7);
-    printf("%d\n", *p);
-
-    // int *p1 = ft_memchr(d, 256, 7);
-    // printf("%d", p1);
-    return (0);
-}*/

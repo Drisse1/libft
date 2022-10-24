@@ -35,13 +35,3 @@ char	*ft_strnstr(const char	*big, const char *little, size_t len)
 	}
 	return (0);
 }
-
-/*int main(void)
-{
-	char *s1 = "A";
-	//char *f = "";
-	int n = ft_strlen(s1) + 1;
-	//printf("%s\n", ft_strnstr(s1, ((void *)0), 3));
-	printf("%s", ft_strnstr(s1, s1, n));
-	return (0);
-}*/

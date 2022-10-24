@@ -40,15 +40,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	p[len1] = '\0';
 	return (p);
 }
-
-/*int main()
-{
-
-	char  s1[6] = "hello";
-	char const *s2 = "world";
-
-	s1[7] = 'w';
-	ft_strlcat(s1, s2, 3);
-
-	return 0;
-}*/

@@ -19,32 +19,3 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
-
-/*int main(void)
-{
-    int c = -20;
-    while (c < 128)
-    {
-        printf("%d ------ ", isascii(c));
-        printf("%d\n", ft_isascii(c));
-        c++;
-    }
-    c = '1';
-    printf("%d ------ ", isascii(c));
-    printf("%d\n", ft_isascii(c));
-    c = 'a';
-    printf("%d ------ ", isascii(c));
-    printf("%d\n", ft_isascii(c));
-    c = 'A';
-    printf("%d ------ ", isascii(c));
-    printf("%d\n", ft_isascii(c));
-    c = '/';
-    printf("%d ------ ", isascii(c));
-    printf("%d\n", ft_isascii(c));
-    c = ' ';
-    printf("%d ------ ", isascii(c));
-    printf("%d\n", ft_isascii(c));
-    c = '\n';
-    printf("%d ------ ", isascii(c));
-    printf("%d\n", ft_isascii(c));
-}*/

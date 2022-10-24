@@ -92,21 +92,3 @@ char	**ft_split(char const *s, char c)
 		return (0);
 	return (ft_handler(s, str, c, start));
 }
-
-// int	main(void)
-// {
-//     const char *s = "hf dfuhsi sfhusfk hvdisuhgs";
-
-//     //printf("%d\n", ft_word_count(s, ' '));
-//     char **res = ft_split(s, ' ');
-
-//     while (*res)
-//     {
-//         printf("%s\n", *res++);
-//     }
-// 	while (1)
-// 	{
-// 	}
-//     return (0);
-// }
-	// str = 0;
