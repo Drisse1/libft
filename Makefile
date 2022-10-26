@@ -40,7 +40,7 @@ $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 bonus: $(OBJS_BONUS)
-	ar rc $(NAME) $(OBJS_BONUS)
+	ar rcs $(NAME) $(OBJS_BONUS)
 
 clean:
 	$(RM) $(OBJS) ${OBJS_BONUS}

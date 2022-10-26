@@ -61,7 +61,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	start;
 	char	*p;
 
-	if (!s1)
+	if (!s1 || !set)
 		return (0);
 	i = 0;
 	start = ft_checkbeg(s1, set);

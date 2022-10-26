@@ -12,18 +12,6 @@
 
 #include "libft.h"
 
-void	func(void *content)
-{
-	int	i;
-
-	i = 0;
-	while (((char *)content)[i])
-	{
-		((char *)content)[i] = '5';
-		i++;
-	}
-}
-
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (!lst || !f)
